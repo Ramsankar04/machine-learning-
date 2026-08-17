@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NetGuard | Network Intrusion Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🛡</span>
+            <span>NetGuard</span>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            System Online
+        </div>
+    </header>
+
+
+    <main class="main-container">
+
+        <section class="hero">
+            <div class="badge">RANDOM FOREST ML</div>
+
+            <h1>Network Intrusion<br><span>Detection System</span></h1>
+
+            <p>
+                Analyze network traffic and identify potentially
+                suspicious activity using machine learning.
+            </p>
+        </section>
+
+
+        <section class="detection-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Network Traffic Analysis</h2>
+                    <p>Enter the network traffic information below.</p>
+                </div>
+
+                <div class="model-tag">
+                    🌲 Random Forest
+                </div>
+            </div>
+
+
+            <form id="predictionForm">
+
+                <div class="section-title">
+                    <span>01</span>
+                    Connection Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label for="duration">Duration</label>
+                        <input
+                            type="number"
+                            id="duration"
+                            placeholder="e.g. 0"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="protocol_type">Protocol Type</label>
+                        <select id="protocol_type">
+                            <option value="tcp">TCP</option>
+                            <option value="udp">UDP</option>
+                            <option value="icmp">ICMP</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="service">Service</label>
+                        <input
+                            type="text"
+                            id="service"
+                            placeholder="e.g. http"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="flag">Connection Flag</label>
+                        <input
+                            type="text"
+                            id="flag"
+                            placeholder="e.g. SF"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="section-title">
+                    <span>02</span>
+                    Traffic Information
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label for="src_bytes">Source Bytes</label>
+                        <input
+                            type="number"
+                            id="src_bytes"
+                            placeholder="e.g. 491"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="dst_bytes">Destination Bytes</label>
+                        <input
+                            type="number"
+                            id="dst_bytes"
+                            placeholder="e.g. 8153"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="detect-btn">
+                    <span>Analyze Network Traffic</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </form>
+
+
+            <div id="result" class="result-box hidden">
+                <div class="result-icon" id="resultIcon">✓</div>
+
+                <div>
+                    <span class="result-label">Prediction</span>
+                    <h3 id="resultText">NORMAL</h3>
+                    <p id="resultMessage">
+                        Network activity appears normal.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="info-section">
+
+            <div class="info-card">
+                <span>🌲</span>
+                <div>
+                    <h3>Random Forest</h3>
+                    <p>Machine learning classification model</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <span>📊</span>
+                <div>
+                    <h3>NSL-KDD Dataset</h3>
+                    <p>Network intrusion detection dataset</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <span>🔒</span>
+                <div>
+                    <h3>Threat Detection</h3>
+                    <p>Normal or suspicious traffic</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Network Intrusion Detection System • Machine Learning Project</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
